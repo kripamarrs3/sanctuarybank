@@ -230,4 +230,48 @@ a { color: var(--color-terracotta); text-decoration: none; }
 
 /* --- Footer --- */
 .main-footer {
-    background: #e9
+    background: #e9e2d9; /* A slightly darker cream */
+    padding: 4rem 0 2rem;
+    color: var(--color-charcoal);
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.footer-column h4 {
+    font-family: var(--font-serif);
+    margin-bottom: 1rem;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+.footer-column a {
+    color: var(--color-charcoal);
+}
+.footer-column a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    border-top: 1px solid var(--color-taupe);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive for Mobile --- */
+@media (max-width: 768px) {
+    .main-header .container { flex-direction: column; gap: 1rem; }
+    .main-nav { display: none; /* Simplification; a real site needs a hamburger menu JS */ }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .path-cards { grid-template-columns: 1fr; }
+    .sanctuary-feature .container { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
