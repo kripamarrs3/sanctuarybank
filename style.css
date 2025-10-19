@@ -208,7 +208,10 @@ a { color: var(--color-terracotta); text-decoration: none; }
 }
 .testimonial-carousel {
   background-color: #fef9f5;
-  padding: 5rem 2rem;
+  padding: 8rem 2rem; /* Taller section background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonial-row {
@@ -221,7 +224,7 @@ a { color: var(--color-terracotta); text-decoration: none; }
   flex-wrap: nowrap;
 }
 
-/* ✅ Consistent card size and typography */
+/* Floating, smaller cards */
 .testimonial-block {
   flex: 1;
   background-color: #fff;
@@ -231,16 +234,17 @@ a { color: var(--color-terracotta); text-decoration: none; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 260px; /* Equal height for all blocks */
+  height: 230px; /* Slightly shorter cards */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .testimonial-block:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
-/* ✅ Elegant quote styling */
+/* Quote text */
 .testimonial-block blockquote {
   font-family: 'Playfair Display', serif;
   font-size: 1.05rem;
@@ -262,7 +266,7 @@ a { color: var(--color-terracotta); text-decoration: none; }
   top: -10px;
 }
 
-/* ✅ Consistent footer */
+/* Author section */
 .testimonial-block cite {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
@@ -273,6 +277,20 @@ a { color: var(--color-terracotta); text-decoration: none; }
 .testimonial-block cite em {
   font-weight: 400;
   color: #777;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .testimonial-row {
+    flex-wrap: wrap;
+  }
+
+  .testimonial-block {
+    flex: 1 1 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 /* Responsive layout */
