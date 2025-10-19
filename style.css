@@ -648,3 +648,21 @@ a { color: var(--color-terracotta); text-decoration: none; }
     font-size: 0.9rem;
     text-align: center;
 }
+/* --- Show Password Icon Styles --- */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 3rem; /* Add space on the right for the icon */
+}
+
+.toggle-password-icon {
+    position: absolute;
+    top: 60%; /* Adjust vertical position */
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--color-taupe); /* Icon color */
+}
