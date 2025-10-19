@@ -227,6 +227,21 @@ a { color: var(--color-terracotta); text-decoration: none; }
     font-weight: 600;
     font-style: normal;
 }
+.testimonial-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 250px; /* Increased height to fit photo */
+}
+
+.testimonial-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* This prevents the image from stretching */
+    margin-bottom: 1.5rem;
+}
 
 /* --- Footer --- */
 .main-footer {
