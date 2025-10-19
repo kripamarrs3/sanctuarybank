@@ -221,17 +221,17 @@ a { color: var(--color-terracotta); text-decoration: none; }
   flex-wrap: nowrap;
 }
 
+/* ✅ Consistent card size and typography */
 .testimonial-block {
   flex: 1;
   background-color: #fff;
   border-radius: 16px;
-  padding: 1.75rem 2rem;
+  padding: 2rem 2.5rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
-  min-height: 280px; /* slightly shorter */
+  height: 260px; /* Equal height for all blocks */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -240,30 +240,32 @@ a { color: var(--color-terracotta); text-decoration: none; }
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
-.testimonial-photo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #e07a5f;
-  margin-bottom: 1rem;
-}
-
-/* ✅ Optimized quote styling */
+/* ✅ Elegant quote styling */
 .testimonial-block blockquote {
   font-family: 'Playfair Display', serif;
-  font-size: 1.05rem; /* smaller */
+  font-size: 1.05rem;
   font-style: italic;
   color: #333;
-  line-height: 1.5;
-  margin: 0 0 1rem 0;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  position: relative;
+  padding: 0.5rem 0;
+  flex-grow: 1;
 }
 
+.testimonial-block blockquote::before {
+  content: "“";
+  font-size: 2rem;
+  color: #e07a5f;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+
+/* ✅ Consistent footer */
 .testimonial-block cite {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #444;
 }
@@ -273,7 +275,7 @@ a { color: var(--color-terracotta); text-decoration: none; }
   color: #777;
 }
 
-/* Responsive */
+/* Responsive layout */
 @media (max-width: 900px) {
   .testimonial-row {
     flex-wrap: wrap;
@@ -282,6 +284,7 @@ a { color: var(--color-terracotta); text-decoration: none; }
   .testimonial-block {
     flex: 1 1 100%;
     max-width: 500px;
+    height: auto; /* Allow flexible height on mobile */
     margin: 0 auto;
   }
 }
