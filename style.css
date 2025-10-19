@@ -554,3 +554,53 @@ a { color: var(--color-terracotta); text-decoration: none; }
 .rate-card .cta-button {
     width: 100%;
 }
+/* --- Dashboard Page Styles --- */
+
+.dashboard-grid {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+}
+
+.dashboard-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.dashboard-card {
+    background-color: var(--color-cream);
+    border: 1px solid #e0d9d1;
+    border-radius: 12px;
+    padding: 2.5rem;
+}
+
+.dashboard-card h3 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.dashboard-card .balance {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+}
+
+.dashboard-card .balance-label {
+    font-weight: 600;
+    color: #6c6c6c;
+    margin: 0.5rem 0 2.5rem 0;
+}
+
+.card-actions a {
+    font-weight: 600;
+    margin-right: 1.5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.card-actions a:hover {
+    border-color: var(--color-terracotta);
+}
