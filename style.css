@@ -604,3 +604,47 @@ a { color: var(--color-terracotta); text-decoration: none; }
 .card-actions a:hover {
     border-color: var(--color-terracotta);
 }
+/* --- Login Page Styles --- */
+
+.login-section {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.login-box {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #e0d9d1;
+    padding: 3rem;
+    border-radius: 12px;
+}
+
+.login-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-box p {
+    color: #6c6c6c;
+    margin-bottom: 2rem;
+}
+
+.login-box .form-group {
+    text-align: left;
+}
+
+.error-message {
+    display: none; /* Hidden by default */
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
