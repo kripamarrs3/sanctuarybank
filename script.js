@@ -1,7 +1,7 @@
 // Wait for the entire page to load before running scripts
 document.addEventListener('DOMContentLoaded', function() {
-
-    // --- Login Form Logic ---
+    
+    // --- Logic for the Login Page ---
     const loginForm = document.getElementById('login-form');
     if (loginForm) {
         const usernameInput = document.getElementById('username');
@@ -19,19 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 errorMessage.style.display = 'block';
             }
         });
+        
+        // Show/Hide Password logic (only runs if the login form exists)
+        const togglePassword = document.getElementById('toggle-password');
+        const passwordField = document.getElementById('password');
+        if (togglePassword && passwordField) {
+            togglePassword.addEventListener('click', function() {
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+            });
+        }
     }
 
-    // --- Show/Hide Password Logic ---
-    const togglePassword = document.getElementById('toggle-password');
-    const passwordInput = document.getElementById('password');
-    if (togglePassword && passwordInput) {
-        togglePassword.addEventListener('click', function() {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-        });
-    }
-
-    // --- Testimonial Carousel Logic ---
+    // --- Logic for the Testimonial Carousel (Homepage) ---
     const slides = document.querySelectorAll('.testimonial-slide');
     const dots = document.querySelectorAll('.dot');
     if (slides.length > 0 && dots.length > 0) {
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let newSlide = (currentSlide + 1) % slides.length;
             showSlide(newSlide);
         }
-
+        
         dots.forEach(dot => {
             dot.addEventListener('click', function() {
                 clearInterval(slideInterval);
@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Start the rotation
+        showSlide(0); // Show the first slide immediately
         slideInterval = setInterval(nextSlide, 5000); 
     }
 });
