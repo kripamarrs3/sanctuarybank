@@ -497,12 +497,4 @@ a { color: var(--color-terracotta); text-decoration: none; }
     font-size: 1.2rem;
     border: none;
 }
-/* --- Image Logo Styling --- */
-.logo-img img {
-    height: 80px; /* Adjust as needed */
-    vertical-align: middle;
-}
-/* Hide the old text logo styling if it exists */
-.logo {
-    display: none;
-}
+
