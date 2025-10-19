@@ -1,48 +1,65 @@
-// Wait for the entire page to load before running the script
+// Wait for the entire page to load before running scripts
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Find the login form, username field, password field, and error message in the HTML
+
+    // --- Login Form Logic ---
     const loginForm = document.getElementById('login-form');
-    const usernameInput = document.getElementById('username');
-    const passwordInput = document.getElementById('password');
-    const errorMessage = document.getElementById('error-message');
-
-    // Check if we found the login form on the page
     if (loginForm) {
-        // Listen for when the user tries to submit the form
-        loginForm.addEventListener('submit', function(event) {
-            
-            // Prevent the form from actually submitting and reloading the page
-            event.preventDefault();
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const errorMessage = document.getElementById('error-message');
 
-            // Get the values the user typed into the fields
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
             const username = usernameInput.value;
             const password = passwordInput.value;
 
-            // For now, let's say the correct login is "Ophelia" and "password123"
-if (username === "Ophelia" && password === "password123") {
-    // If login is correct, redirect to the dashboard page.
-    window.location.href = 'dashboard.html';
+            if (username === "Ophelia" && password === "password123") {
+                window.location.href = 'dashboard.html';
             } else {
-                // If login is incorrect, make the error message visible
                 errorMessage.style.display = 'block';
             }
         });
     }
-});
-// --- Show/Hide Password Logic ---
-document.addEventListener('DOMContentLoaded', function() {
+
+    // --- Show/Hide Password Logic ---
     const togglePassword = document.getElementById('toggle-password');
     const passwordInput = document.getElementById('password');
-
     if (togglePassword && passwordInput) {
         togglePassword.addEventListener('click', function() {
-            // Check the current type of the input
             const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordInput.setAttribute('type', type);
-
-            // Optional: Change the icon to an "eye-slash" when visible
-            // For simplicity, we are just toggling visibility here.
         });
+    }
+
+    // --- Testimonial Carousel Logic ---
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.dot');
+    if (slides.length > 0 && dots.length > 0) {
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let newSlide = (currentSlide + 1) % slides.length;
+            showSlide(newSlide);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                clearInterval(slideInterval);
+                showSlide(parseInt(this.getAttribute('data-slide')));
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
+
+        // Start the rotation
+        slideInterval = setInterval(nextSlide, 5000); 
     }
 });
