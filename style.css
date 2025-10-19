@@ -717,3 +717,56 @@ a { color: var(--color-terracotta); text-decoration: none; }
     cursor: pointer;
     color: var(--color-taupe); /* Icon color */
 }
+/* --- Contact Page Styles --- */
+
+.contact-options {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+}
+
+.contact-options .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    border: 1px solid #e0d9d1;
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.phone-number {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terracotta);
+    margin-top: 1.5rem;
+}
+
+.virtual-assistant {
+    background-color: var(--color-cream);
+    padding: 6rem 0;
+}
+
+.virtual-assistant .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.va-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
