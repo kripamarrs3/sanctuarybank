@@ -275,7 +275,7 @@ a { color: var(--color-terracotta); text-decoration: none; }
   max-width: 520px;
   position: relative;
   padding-left: 0.8rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
 }
 
 .testimonial-slide blockquote::before {
