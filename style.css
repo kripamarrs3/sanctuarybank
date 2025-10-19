@@ -357,6 +357,58 @@ a { color: var(--color-terracotta); text-decoration: none; }
     text-align: center;
     padding: 6rem 0;
 }
+/* --- Resources Page Styles --- */
+.guided-path {
+    padding: 6rem 0;
+}
+.guided-path .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+.path-option-card {
+    background: var(--color-white);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.path-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.path-option-card h3 {
+    font-size: 1.6rem;
+}
+.path-option-card p {
+    margin-bottom: 2rem;
+    color: #6c6c6c;
+}
+
+/* --- About Us Page Styles --- */
+.about-us-content {
+    padding: 6rem 0;
+}
+.about-us-content .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.about-text-content h1 {
+    font-size: 3rem;
+}
+.about-text-content p.mission {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #5c5c5c;
+    margin: 2rem 0;
+}
+.about-image-content img {
+    width: 100%;
+    border-radius: 12px;
+}
 
 .next-steps p {
     max-width: 500px;
