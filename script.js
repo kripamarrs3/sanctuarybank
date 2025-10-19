@@ -1,15 +1,19 @@
-// Wait for the entire page to load before running scripts
+// Wait for the entire page to load before running any scripts
 document.addEventListener('DOMContentLoaded', function() {
     
     // --- Logic for the Login Page ---
+    // First, check if we are on the login page by looking for the login form.
     const loginForm = document.getElementById('login-form');
     if (loginForm) {
+        // If the form exists, then we can safely find the other login elements.
         const usernameInput = document.getElementById('username');
         const passwordInput = document.getElementById('password');
         const errorMessage = document.getElementById('error-message');
+        const togglePassword = document.getElementById('toggle-password');
 
+        // Add the submit logic for the form.
         loginForm.addEventListener('submit', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent page reload
             const username = usernameInput.value;
             const password = passwordInput.value;
 
@@ -20,18 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Show/Hide Password logic (only runs if the login form exists)
-        const togglePassword = document.getElementById('toggle-password');
-        const passwordField = document.getElementById('password');
-        if (togglePassword && passwordField) {
+        // Add the show/hide password logic.
+        if (togglePassword && passwordInput) {
             togglePassword.addEventListener('click', function() {
-                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordField.setAttribute('type', type);
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
             });
         }
     }
 
     // --- Logic for the Testimonial Carousel (Homepage) ---
+    // First, check if the carousel exists on the current page.
     const slides = document.querySelectorAll('.testimonial-slide');
     const dots = document.querySelectorAll('.dot');
     if (slides.length > 0 && dots.length > 0) {
