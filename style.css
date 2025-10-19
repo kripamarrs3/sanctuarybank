@@ -275,3 +275,90 @@ a { color: var(--color-terracotta); text-decoration: none; }
     .sanctuary-feature .container { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
 }
+/* --- Personal Page Styles --- */
+
+.page-hero {
+    background-color: #e9e2d9; /* A slightly darker cream from footer */
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-hero h2 {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #5c5c5c;
+}
+
+.main-nav a.active {
+    color: var(--color-terracotta);
+    border-bottom: 2px solid var(--color-terracotta);
+    padding-bottom: 4px;
+}
+
+.account-showcase {
+    padding: 6rem 0;
+}
+
+.account-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.account-card.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.account-card.reverse .account-text {
+    order: 2;
+}
+
+.account-card img {
+    width: 100%;
+    border-radius: 12px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.account-text h2 {
+    font-size: 2.5rem;
+}
+
+.account-text p.mission {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: #6c6c6c;
+    margin-bottom: 1.5rem;
+}
+
+.account-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.account-text li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.next-steps {
+    background-color: var(--color-white);
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.next-steps p {
+    max-width: 500px;
+    margin: 1rem auto 2rem;
+}
