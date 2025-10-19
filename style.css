@@ -206,10 +206,9 @@ a { color: var(--color-terracotta); text-decoration: none; }
     max-width: 500px;
     margin-bottom: 2rem;
 }
-
 .testimonial-carousel {
-  padding: 6rem 0;
-  background-color: #fef9f5; /* soft taupe background */
+  background-color: #fef9f5;
+  padding: 5rem 2rem;
 }
 
 .testimonial-row {
@@ -219,94 +218,71 @@ a { color: var(--color-terracotta); text-decoration: none; }
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* allows stacking on smaller screens */
+  flex-wrap: nowrap;
 }
 
-/* Each testimonial card */
 .testimonial-block {
+  flex: 1;
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
-  padding: 2rem 2rem;
-  flex: 1 1 30%; /* each takes about 1/3 width */
+  padding: 1.75rem 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
-  transition: all 0.3s ease;
-  min-width: 300px;
+  justify-content: space-between;
+  min-height: 280px; /* slightly shorter */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-block:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
-/* Photo */
 .testimonial-photo {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #e07a5f;
   margin-bottom: 1rem;
 }
 
-/* Quote text */
+/* ✅ Optimized quote styling */
 .testimonial-block blockquote {
   font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: #2f2f2f;
-  margin: 0;
+  font-size: 1.05rem; /* smaller */
   font-style: italic;
-  position: relative;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.testimonial-block blockquote::before {
-  content: "“";
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #e07a5f;
-  position: absolute;
-  left: -0.5rem;
-  top: -1rem;
-  opacity: 0.4;
-}
-
-/* Author name */
 .testimonial-block cite {
-  display: block;
-  margin-top: 1rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
-  font-style: normal;
   font-weight: 600;
-  color: #555;
+  color: #444;
 }
 
 .testimonial-block cite em {
   font-weight: 400;
-  font-style: italic;
-  color: #666;
+  color: #777;
 }
 
-/* Responsive behavior */
+/* Responsive */
 @media (max-width: 900px) {
   .testimonial-row {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
   }
 
   .testimonial-block {
-    width: 90%;
+    flex: 1 1 100%;
     max-width: 500px;
-  }
-
-  .testimonial-block blockquote::before {
-    display: none;
+    margin: 0 auto;
   }
 }
 
