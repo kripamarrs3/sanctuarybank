@@ -279,7 +279,6 @@ a { color: var(--color-terracotta); text-decoration: none; }
 .dot:hover {
     background-color: var(--color-terracotta);
 }
-
 /* --- Footer --- */
 .main-footer {
     background: #e9e2d9; /* A slightly darker cream */
