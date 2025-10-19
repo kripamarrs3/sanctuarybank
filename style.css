@@ -523,6 +523,7 @@ a { color: var(--color-terracotta); text-decoration: none; }
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .rate-card h3 {
