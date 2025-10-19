@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open an Account | The Sanctuary Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">The Sanctuary Bank</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="personal.html">Personal</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button login-button">Member Log In</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Let's get started.</h1>
+                <h2>Open your Sanctuary Bank account in just a few minutes.</h2>
+            </div>
+        </section>
+
+        <section class="account-form-section">
+            <div class="container">
+                <form class="account-form">
+                    <fieldset class="form-step">
+                        <legend>Step 1: Personal Information</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ssn">Social Security Number</label>
+                            <input type="text" id="ssn" name="ssn" placeholder="XXX-XX-XXXX" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step">
+                        <legend>Step 2: Contact Information</legend>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code</label>
+                                <input type="text" id="zip" name="zip" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step">
+                        <legend>Step 3: Choose Your Account</legend>
+                        <div class="form-group">
+                             <label for="account-type">What account would you like to open?</label>
+                             <select id="account-type" name="account-type">
+                                <option value="signature">The Signature Checking</option>
+                                <option value="flourish">The Flourish HISA</option>
+                                <option value="founder">The Founder's Checking</option>
+                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="initial-deposit">Initial Deposit Amount</label>
+                            <input type="text" id="initial-deposit" name="initial-deposit" placeholder="$100.00">
+                        </div>
+                         <div class="form-group">
+                            <label for="password">Create a Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                    </fieldset>
+                    
+                    <button type="submit" class="cta-button primary form-submit-button">Submit Application</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+           <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>The Sanctuary Bank</h4>
+                    <p>Bank with Intention.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Accounts</h4>
+                    <ul>
+                        <li><a href="#">Signature Checking</a></li>
+                        <li><a href="#">Flourish HISA</a></li>
+                        <li><a href="#">Founder's Checking</a></li>
+                        <li><a href="#">Legacy Fund</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">The Learning Sanctuary</a></li>
+                        <li><a href="#">Workshops</a></li>
+                        <li><a href="#">Calculators</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclosures</a></li>
+                        <li>FDIC Insured</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Sanctuary Bank. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
