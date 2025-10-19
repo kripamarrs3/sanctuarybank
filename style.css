@@ -499,7 +499,7 @@ a { color: var(--color-terracotta); text-decoration: none; }
 }
 /* --- Image Logo Styling --- */
 .logo-img img {
-    height: 40px; /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
     vertical-align: middle;
 }
 /* Hide the old text logo styling if it exists */
