@@ -208,70 +208,89 @@ a { color: var(--color-terracotta); text-decoration: none; }
 }
 
 /* --- Testimonial Carousel Styles --- */
-/* Reduce the vertical padding / height of the testimonial card */
+/* --- Testimonial Carousel Styles --- */
+.testimonial-carousel {
+    padding: 4rem 0;
+    background-color: var(--color-white);
+    text-align: left;
+}
+
 .testimonial-wrapper {
-    padding: 1.5rem 2rem;        /* instead of large padding, use smaller */
-    /* If you had a fixed height like height: 250px; you may remove or reduce it */
-    height: auto;
-    min-height: 180px;          /* a minimum so it doesn’t collapse too much */
-}
-
-/* Make sure slides are flex containers so name can sit at bottom */
-.testimonial-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;  /* push quote up and name down */
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-/* When slide is active, show it */
-.testimonial-slide.active {
-    opacity: 1;
-}
-
-/* Style for quote block – reduce size if needed */
-.testimonial-slide blockquote {
-    font-size: 1.4rem;           /* smaller than before so fits better */
-    line-height: 1.4;
-    margin: 0 0 1rem 0;
-    flex-grow: 1;                /* allow quote block to take available space */
-}
-
-/* Place the cite (name) at the bottom, smaller and subtle */
-.testimonial-slide cite {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #666;
-    text-align: right;          /* align the name to the right if you like */
-    /* If you like full width: text-align: center; */
-}
-
-/* Ensure the white background (if you are using one) doesn’t spread too tall */
-.testimonial-wrapper,
-.testimonial-slide {
-    background-color: #fff;     /* if you want a white card */
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-    .testimonial-dots {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
 }
+
+/* Slide styles */
+.testimonial-slide {
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+}
+
+.testimonial-slide.active {
+    display: flex;
+}
+
+/* Photo on the left */
+.testimonial-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Text block */
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.testimonial-text blockquote {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0;
+    color: var(--color-charcoal);
+}
+
+.testimonial-text cite {
+    display: block;
+    margin-top: 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #666;
+}
+
+/* Dots */
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 10px;
 }
 
 .dot {
     cursor: pointer;
     height: 12px;
     width: 12px;
-    margin: 0 5px;
     background-color: var(--color-taupe);
     border-radius: 50%;
     display: inline-block;
@@ -281,6 +300,33 @@ a { color: var(--color-terracotta); text-decoration: none; }
 .dot.active,
 .dot:hover {
     background-color: var(--color-terracotta);
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 600px) {
+    .testimonial-wrapper {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+    }
+
+    .testimonial-slide {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .testimonial-photo {
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-text blockquote {
+        font-size: 1.2rem;
+    }
+
+    .testimonial-text cite {
+        text-align: center;
+    }
 }
 /* --- Footer --- */
 .main-footer {
