@@ -33,37 +33,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- Logic for the Testimonial Carousel (Homepage) ---
-    // First, check if the carousel exists on the current page.
-    const slides = document.querySelectorAll('.testimonial-slide');
-    const dots = document.querySelectorAll('.dot');
-    if (slides.length > 0 && dots.length > 0) {
-        let currentSlide = 0;
-        let slideInterval;
-
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            slides[index].classList.add('active');
-            dots[index].classList.add('active');
-            currentSlide = index;
-        }
-
-        function nextSlide() {
-            let newSlide = (currentSlide + 1) % slides.length;
-            showSlide(newSlide);
-        }
-        
-        dots.forEach(dot => {
-            dot.addEventListener('click', function() {
-                clearInterval(slideInterval);
-                showSlide(parseInt(this.getAttribute('data-slide')));
-                slideInterval = setInterval(nextSlide, 5000);
-            });
-        });
-
-        // Start the rotation
-        showSlide(0); // Show the first slide immediately
-        slideInterval = setInterval(nextSlide, 5000); 
-    }
-});
+  
