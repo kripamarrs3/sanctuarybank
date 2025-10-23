@@ -740,7 +740,7 @@ a { color: var(--color-terracotta); text-decoration: none; }
 /* --- New Testimonial Section Styles --- */
 
 .testimonial-section {
-    background-color: var(--color-taupe); /* #C8BBAE */
+    background-color: var(--color-cream);
     padding: 6rem 0;
 }
 
